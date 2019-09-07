@@ -1,0 +1,25 @@
+---
+title: "partner_AlexThompson"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Questions
+**Your (the "Partner's") full name and GitHub username. **
+
+My name is Alex Thompson, github is satdragon
+
+**What did the Owner do in the most recent commit? What is the commit ID?**
+
+Last commit they added files and the id 59954faeaf5b823e3eac1095d7423c3a43c6cb3d
+
+**Knit the Owner's `owner_YourName.Rmd`. Are you able to do so without error? If you cannot, what errors did you encounter?**
+
+Did it, had no errors.
+
+**Also include one tip for making Git/GitHub easier, or an error/difficulty you encountered.**
+
+I think git works more smooth if you make sure everything is name properly before going in and that you know you are in the right directory. 
