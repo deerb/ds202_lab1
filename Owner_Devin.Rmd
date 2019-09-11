@@ -25,7 +25,7 @@ I study Spanish and sometimes data science
 
 **Interesting fact about me**
 
-I have a pet bird, his name Xeko
+I have a pet bird, his name is Xeko
 
 ```{r}
 print("Hello")
