@@ -6,6 +6,7 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+#Questions
 
 **Name**
 
@@ -27,6 +28,69 @@ I study Spanish and sometimes data science
 
 I have a pet bird, his name is Xeko
 
+##Understanding Concepts
+
+**Explain the difference between Git and Github**
+
+Git is the tool that will save your history and deals with your coding, whereas Github is what will host your repositories. Essentially Git is a tool that you can use and Github is the place that can organzie your projects that use Git.
+
+**Can Git and Github be used independently? Why don't we do so? Describe the advantages and disadvantages.**
+
+Git and Github can be used independently from each other but we don't do this because it is easier and safer to use Github for out Git projects because it is reputable and easier to use someone else's version control system than finding or creating our own. The advantages are that it is easy and safe and the disadvantages are that we need to constatnly connect in order for our work to be saved and commited and pushed onto the repository.
+
+**What is a repository in Git and how can you create a repository in Git (Write out the command(s))**
+
+A repository in in Git is somewhere that your history and previous versions of your code are saved and stored. In order to make a new repository you first must get into the correct directory where you want to put the repository then if you are using bash you wirte the command *git init*, after this is done and the repository can is created you can add files to it by using *git add "file name"* then once you finish that you need to commit the changes you made by using *git commit -m "an explanatory message"*.
+
+##Coding Exercises
+
+**Write out the code to count the total number of 'NA' occurrences in the vector 'X = c(47,34,33,65,37,NA,43,NA,11,NA,23,NA)'**
+
 ```{r}
-print("Hello")
+x = c(47,34,33,65,37,NA,43,NA,11,NA,23,NA)
+amount = 0
+for(k in x)
+{
+  if(is.na(k))
+  {
+    amount = amount + 1
+  }
+}
+print(amount)
+```
+
+**Run the following code:**
+
+```{r}
+age = c(25,30,45,60,12,41)
+smoker = c('T','F','T','F','F','F')
+weight = c(120,137,0,168,91,142)
+example_data = data.frame(age,smoker,weight)
+```
+
+**Correct the entry error**
+
+```{r}
+weight[3] = 150
+print(weight)
+```
+
+**In the following I have two code snippets. Turn these code snippets into functions. Think about what each function does and what you would name it. How many arguments does it need?**
+
+```{r}
+mean(is.na(x))
+x / sum(x, na.rm = TRUE)
+```
+The first snippet is for one argument and a vector. The funtion gives you the NA values. The second snippet needs two arguments and a vector and also needs for the property to be set. This one gives you how much of the sum each value in the vector makes up. The first one would be named valuesNa and the second one would be percentOfSum.
+
+**Write a function named `both_na()`. This function take two vectors of the same length and returns the number of positions that have an `NA` value in both vectors.**
+
+```{r}
+both_na <- function(x, y) {
+  sum(is.na(x) & is.na(y))
+}
+both_na(
+  c(NA, NA, 1, 2),
+  c(NA, 1, NA, 2)
+)
 ```
